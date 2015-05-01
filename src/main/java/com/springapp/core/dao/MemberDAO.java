@@ -44,7 +44,7 @@ public class MemberDAO {
 
         PreparedStatement pstmt = null;
 
-        String sql = "update MEMBER set PASSWORD=?, USERNAME=?, USER_ADDRESS=?, USER_NUMBER=? where ID=?";
+        String sql = "update MEMBER set member_password=?, member_name=?, member_address=?, member_number=? where ID=?";
 
         try {
 
@@ -67,7 +67,7 @@ public class MemberDAO {
 
         PreparedStatement pstmt = null;
 
-        String sql = "delete from MEMBER where ID=?";
+        String sql = "delete from MEMBER where member_id=?";
 
         try {
 
@@ -88,7 +88,7 @@ public class MemberDAO {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
 
-        String sql = "select * from MEMBER where ID = ?";
+        String sql = "select * from MEMBER where member_id = ?";
 
         try {
             pstmt = conn.prepareStatement(sql);
